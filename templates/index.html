@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeConnect | FAQ Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">C</div>
+            <div>
+                <h2>CollegeConnect</h2>
+                <p>Student Help Center</p>
+            </div>
+        </div>
+
+        <div class="sidebar-label">MENU</div>
+
+        <div class="menu-item active">
+            <span>▣</span> FAQ Assistant
+        </div>
+
+        <div class="sidebar-card">
+            <div class="sidebar-card-icon">✦</div>
+            <h3>Need assistance?</h3>
+            <p>I'm here to help you find answers to your college-related questions.</p>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="online-dot"></div>
+            <span>Assistant is ready</span>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>FAQ Assistant</h1>
+                <p>Get quick answers to your college questions.</p>
+            </div>
+            <div class="status-badge">
+                <span class="online-dot"></span>
+                Online
+            </div>
+        </header>
+
+        <section class="chat-wrapper">
+
+            <div class="chat-heading">
+                <div class="bot-avatar">✦</div>
+                <div>
+                    <h2>CollegeConnect Assistant</h2>
+                    <p>Your friendly college information guide</p>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages" aria-live="polite">
+                <div class="message bot-message">
+                    <div class="message-avatar">✦</div>
+                    <div class="message-content">
+                        <div class="message-name">CollegeConnect</div>
+                        <div class="bubble">
+                            Hi there! 👋 Welcome to CollegeConnect.<br><br>
+                            I'm here to help you with college-related questions.
+                            Ask me about admissions, courses, fees, placements,
+                            examinations, or campus facilities!
+                        </div>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suggestions" id="suggestions">
+                <p>TRY ASKING</p>
+                <div class="suggestion-list">
+                    <button class="suggestion-chip" data-question="How can I apply for admission?">🎓 Admissions</button>
+                    <button class="suggestion-chip" data-question="What are the college fees?">💳 College fees</button>
+                    <button class="suggestion-chip" data-question="Does the college provide placement assistance?">💼 Placements</button>
+                    <button class="suggestion-chip" data-question="Does the college provide hostel facilities?">🏠 Hostel</button>
+                </div>
+            </div>
+
+            <form class="chat-input-area" id="chatForm">
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Type your question here..."
+                    autocomplete="off"
+                    aria-label="Type your college question"
+                >
+                <button type="submit" id="sendButton">
+                    <span>Send</span>
+                    <span>➤</span>
+                </button>
+            </form>
+
+            <p class="input-note">CollegeConnect may provide general information. Verify important details with your college office.</p>
+
+        </section>
+
+        <footer class="page-footer">
+            Made with <span>♥</span> to make college information easier to access.
+        </footer>
+
+    </main>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+</html>
